@@ -3,7 +3,12 @@ package hello
 import (
 	"net/http"
 
+	"github.com/fredy-bambang/learngoyave/database/sqlboiler/model"
+	"github.com/google/uuid"
+	"github.com/volatiletech/null/v8"
+	"github.com/volatiletech/sqlboiler/v4/boil"
 	"goyave.dev/goyave/v3"
+	"goyave.dev/goyave/v3/database"
 )
 
 // Controllers are files containing a collection of Handlers related to a specific feature.
@@ -31,4 +36,21 @@ func SayHi(response *goyave.Response, request *goyave.Request) {
 // This route is validated. See "http/request/echorequest/echo.go" for more details.
 func Echo(response *goyave.Response, request *goyave.Request) {
 	response.String(http.StatusOK, request.String("text"))
+}
+
+// StoreUser .
+func StoreUser(response *goyave.Response, request *goyave.Request) {
+	db, _ := database.Conn().DB()
+	task := &model.Task{
+		ID:         uuid.New().String(),
+		Title:      null.StringFrom("test title"),
+		IsFinished: null.BoolFrom(true),
+	}
+
+	if err := task.Insert(request.Request().Context(), db, boil.Infer()); err != nil {
+		response.Error(err)
+	}
+
+	taskOutput, _ := model.Tasks().All(request.Request().Context(), db)
+	response.JSON(http.StatusOK, taskOutput)
 }

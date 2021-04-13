@@ -29,4 +29,6 @@ func Register(router *goyave.Router) {
 
 	// Route with validation
 	router.Post("/echo", hello.Echo).Validate(hello.EchoRequest)
+
+	router.Get("/store", hello.StoreUser)
 }

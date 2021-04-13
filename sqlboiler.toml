@@ -1,0 +1,7 @@
+output  = "./database/sqlboiler/model"
+pkgname	= "model"
+wipe    = true
+
+[sqlite3]
+dbname = "learngoyave"
+blacklist = ["goose_db_version"]

@@ -10,7 +10,7 @@ import (
 	// Import the appropriate GORM dialect for the database you're using.
 	// _ "goyave.dev/goyave/v3/database/dialect/mysql"
 	// _ "goyave.dev/goyave/v3/database/dialect/postgres"
-	// _ "goyave.dev/goyave/v3/database/dialect/sqlite"
+	_ "goyave.dev/goyave/v3/database/dialect/sqlite"
 	// _ "goyave.dev/goyave/v3/database/dialect/mssql"
 )
 

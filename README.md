@@ -1,6 +1,8 @@
-# Goyave Template
+# Personal Go Project with goyave and sqlboiler
 
-A template project to get started with the [Goyave](https://github.com/System-Glitch/goyave) framework.
+I'm using goyave as for this project and sqlboiler for replace GORM <br>
+[Goyave](https://github.com/System-Glitch/goyave) framework. <br>
+I use it for learning purpose, you can use it if it suits your needs with your own responsibility.
 
 ## Getting Started
 
@@ -25,28 +27,6 @@ $ curl -H "Content-Type: application/json" -X POST -d '{"text":"abc 123"}' http:
 abc 123
 ```
 
-## Learning Goyave
-
-The Goyave framework has an extensive documentation covering in-depth subjects and teaching you how to run a project using Goyave from setup to deployment.
-
-<a href="https://goyave.dev/guide/installation"><h3 align="center">Read the documentation</h3></a>
-
-<a href="https://pkg.go.dev/goyave.dev/goyave/v3"><h3 align="center">pkg.go.dev</h3></a>
-
-## Contributing
-
-Thank you for considering contributing to the Goyave framework! You can find the contribution guide in the [documentation](https://goyave.dev/guide/contribution-guide.html).
-
-I have many ideas for the future of Goyave. I would be infinitely grateful to whoever want to support me and let me continue working on Goyave and making it better and better.
-
-You can support me on Github Sponsor or Patreon.
-
-<a href="https://github.com/sponsors/System-Glitch">❤ Sponsor me!</a>
-
-<a href="https://www.patreon.com/bePatron?u=25997573">
-    <img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" width="160">
-</a>
-
 ## License
 
-The Goyave framework is MIT Licensed. Copyright © 2019 Jérémy LAMBERT (SystemGlitch)
+for goyave license, can refer to https://github.com/go-goyave/goyave/blob/master/LICENSE

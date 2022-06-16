@@ -15,4 +15,4 @@ CREATE TABLE "task" (
 -- +goose StatementBegin
 SELECT 'down SQL query';
 -- +goose StatementEnd
-DROP TABLE IF EXISTS "user"
+DROP TABLE IF EXISTS "task"

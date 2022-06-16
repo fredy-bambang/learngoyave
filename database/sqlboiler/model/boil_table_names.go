@@ -5,6 +5,8 @@ package model
 
 var TableNames = struct {
 	Task string
+	User string
 }{
 	Task: "task",
+	User: "user",
 }

@@ -3,7 +3,7 @@ package model
 import (
 	"github.com/bxcodec/faker/v3"
 	"gorm.io/gorm"
-	"goyave.dev/goyave/v3/database"
+	"goyave.dev/goyave/v4/database"
 )
 
 // A model is a structure reflecting a database table structure. An instance of a model
@@ -23,6 +23,7 @@ type User struct {
 	gorm.Model
 	Name  string `gorm:"type:char(100)"`
 	Email string `gorm:"type:char(100);uniqueIndex"`
+	Role  string `gorm:"type:char(100);uniqueIndex"`
 }
 
 // You may need to test features interacting with your database.

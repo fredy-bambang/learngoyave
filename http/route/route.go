@@ -2,9 +2,10 @@ package route
 
 import (
 	"github.com/fredy-bambang/learngoyave/http/controller/hello"
+	"github.com/fredy-bambang/learngoyave/http/controller/user"
 
-	"goyave.dev/goyave/v3"
-	"goyave.dev/goyave/v3/cors"
+	"goyave.dev/goyave/v4"
+	"goyave.dev/goyave/v4/cors"
 )
 
 // Routing is an essential part of any Goyave application.
@@ -31,4 +32,7 @@ func Register(router *goyave.Router) {
 	router.Post("/echo", hello.Echo).Validate(hello.EchoRequest)
 
 	router.Get("/store", hello.StoreUser)
+
+	userRouter := router.Subrouter("/user")
+	userRouter.Post("", user.Store).Validate(user.StoreRequest)
 }

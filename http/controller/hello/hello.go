@@ -7,8 +7,8 @@ import (
 	"github.com/google/uuid"
 	"github.com/volatiletech/null/v8"
 	"github.com/volatiletech/sqlboiler/v4/boil"
-	"goyave.dev/goyave/v3"
-	"goyave.dev/goyave/v3/database"
+	"goyave.dev/goyave/v4"
+	"goyave.dev/goyave/v4/database"
 )
 
 // Controllers are files containing a collection of Handlers related to a specific feature.

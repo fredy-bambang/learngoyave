@@ -5,10 +5,27 @@ I'm using goyave as for this project and sqlboiler for replace GORM <br>
 I use it for learning purpose, you can use it if it suits your needs with your own responsibility.
 
 ## Getting Started
+get goose db migration 
+go get -u github.com/pressly/goose/cmd/goose
+
+sqlboiler v4
+go get -u -t github.com/volatiletech/sqlboiler/v4
+go get -u -t github.com/volatiletech/null/v8
+go get github.com/volatiletech/sqlboiler/v4/drivers/sqlboiler-psql
+
+<!-- goose -dir ./database/sqlboiler/migrations sqlite3 "user=postgres password=password dbname=todo sslmode=disable" up -->
+running the migration 
+goose -dir ./database/sqlboiler/migrations sqlite3 ./foo.db up
+
+create new migration file 
+goose -dir ./database/sqlboiler/migrations create create_table_task sql
+
+generate model 
+sqlboiler --add-soft-deletes psql
 
 ### Requirements
 
-- Go 1.13+
+- Go 1.17+
 - Go modules
 
 ### Running the project

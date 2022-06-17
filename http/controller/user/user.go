@@ -46,7 +46,7 @@ func Store(res *goyave.Response, req *goyave.Request) {
 	if err := user.Insert(req.Request().Context(), db, boil.Infer()); err != nil {
 		res.Error(err)
 	} else {
-		res.JSON(http.StatusOK, user)
+		res.JSON(http.StatusCreated, user)
 	}
 
 }
